@@ -20,6 +20,12 @@ const checkbox = document.getElementById('theme-switch-toggle');
 const body = document.querySelector('body');
 
 checkbox.addEventListener('change', () => {
-    body.classList.toggle('dark-theme');
+    if (checkbox.checked) {
+        body.classList.add('dark-theme');
+        body.classList.replace('light-theme', 'dark-theme');
+    } else {
+body.classList.replace('dark-theme', 'light-theme');
+    }
 })
 
+localStorage.setItem('checkbox', checkbox.checked);
