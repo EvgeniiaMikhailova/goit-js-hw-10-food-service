@@ -33,5 +33,11 @@ const changeTheme = () => {
         body.classList.add('light-theme');
     }
 }
-
 changeTheme();
+
+const changeCheckbox = () => {
+    if (currentTheme === 'dark-theme') {
+ checkbox.checked = true;
+    }
+}
+changeCheckbox();
